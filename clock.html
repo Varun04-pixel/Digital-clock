@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital clock !!</title>
+    <style>
+        /* CSS */
+        .container {
+            position: relative;
+            text-align: center;
+        }
+
+        #date, #hours, #minutes, #seconds {
+            font-size: 4rem;
+        }
+
+        .p1 {
+            display: inline-block;
+            border: solid 2px #000;
+            border-radius: 15px;
+            padding: 10px 40px 20px 40px;
+            background: #8544db;
+        }
+
+    </style>
+</head>
+<body>
+        <!--HTML-->
+        <h1 style="text-align: center;">Digital clock :</h1>
+        <br><br>
+        <div class="container">
+            <div class="p1">
+                <h3>Date</h3>
+                <hr>
+                <div id="date"></div>
+            </div> &nbsp; &nbsp; &nbsp;
+
+            <div class="p1">
+                <h3>Hours</h3>
+                <hr>
+                <div id="hours"></div>
+            </div> &nbsp; &nbsp; &nbsp;
+    
+            <div class="p1">
+                <h3>Minutes</h3>
+                <hr>
+                <div id="minutes"></div>
+            </div> &nbsp; &nbsp; &nbsp;
+    
+            <div class="p1">
+                <h3>Seconds</h3>
+                <hr>
+                <div id="seconds"></div>
+            </div> &nbsp; &nbsp; &nbsp;
+        </div>
+        
+    <!--Javascript-->
+    <script>
+
+        let a = new Date();
+        let d = a.getDate();
+        let h = a.getHours();
+        let m = a.getMinutes();
+        let s = a.getSeconds();
+
+        document.getElementById('date').innerHTML=d;
+        document.getElementById('hours').innerHTML=h;
+        document.getElementById('minutes').innerHTML=m;
+        document.getElementById('seconds').innerHTML=s;
+
+        setTimeout(() => { document. location. reload(); }, 1000);
+        
+    </script>
+</body>
+</html>
